@@ -1,245 +1,210 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Professional CV for Himanshu">
-
-    <title>Himanshu | CV</title>
-
+    <title>Himanshu | Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-
-        body {
-
+        /* General Styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
-
-            margin: 0;
-
-            padding: 0;
-
+        }
+        body {
+            background-color: #f4f6f9;
             color: #333;
-
             line-height: 1.6;
-
+        }
+        h1, h2, h3 {
+            color: #444;
+            margin-bottom: 0.5em;
         }
 
-        header {
-
-            background: #333;
-
-            color: #fff;
-
-            padding: 1em;
-
-            text-align: center;
-
-        }
-
-        header h1 {
-
-            margin: 0;
-
-        }
-
+        /* Container */
         .container {
-
-            width: 90%;
-
-            max-width: 1000px;
-
+            max-width: 900px;
             margin: 0 auto;
-
-            padding: 2em;
-
+            padding: 1em;
         }
 
-        .section {
-
-            margin-bottom: 2em;
-
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 1em 0;
         }
-
-        .section h2 {
-
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.2em;
             color: #333;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #777;
+        }
+        header .social-icons i {
+            color: #555;
+            margin: 0 0.5em;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+        header .social-icons i:hover {
+            color: #007bff;
+        }
 
+        /* Section Styling */
+        section {
+            margin-top: 2em;
+            padding: 1em;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            font-size: 1.8em;
             border-bottom: 2px solid #333;
-
             padding-bottom: 0.3em;
-
+            margin-bottom: 1em;
+        }
+        section p, section ul {
+            color: #555;
+            font-size: 1em;
         }
 
-        .section ul {
-
+        /* Skills Section */
+        .skills ul {
+            display: flex;
+            flex-wrap: wrap;
             list-style: none;
-
-            padding: 0;
-
+        }
+        .skills li {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5em;
+        }
+        .skills i {
+            color: #007bff;
+            font-size: 1.5em;
+            margin-right: 0.5em;
         }
 
-        .section ul li {
-
-            margin: 0.5em 0;
-
+        /* Experience and Education */
+        .timeline {
+            padding-left: 1em;
+            border-left: 3px solid #007bff;
+            position: relative;
+        }
+        .timeline-item {
+            margin-bottom: 1.5em;
+            position: relative;
+            padding-left: 1.5em;
+        }
+        .timeline-item::before {
+            content: " ";
+            width: 10px;
+            height: 10px;
+            background-color: #007bff;
+            border-radius: 50%;
+            position: absolute;
+            left: -8px;
+            top: 5px;
+        }
+        .timeline-item h3 {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 0.3em;
+        }
+        .timeline-item span {
+            font-size: 0.9em;
+            color: #777;
+        }
+        .timeline-item p {
+            font-size: 1em;
+            margin-top: 0.5em;
+            color: #555;
         }
 
-        .project-title {
-
-            font-weight: bold;
-
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
+            font-size: 0.9em;
+            color: #777;
         }
-
     </style>
-
 </head>
-
 <body>
 
-
-
-<header>
-
-    <h1>Himanshu's CV</h1>
-
-    <p>Backend Engineer with over 8 years of experience in Java, Spring Boot, AWS, and Microservices Architecture.</p>
-
-</header>
-
-
-
 <div class="container">
-
-
+    <!-- Header -->
+    <header>
+        <h1>Himanshu</h1>
+        <p>Backend Engineer | Java, Spring Boot, AWS, Microservices</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+    </header>
 
     <!-- Profile Section -->
-
-    <div class="section" id="profile">
-
+    <section id="profile">
         <h2>Profile</h2>
-
-        <p>Experienced Backend Engineer skilled in Java, Spring Boot, PostgreSQL, Docker, Kubernetes, and AWS. Passionate about building scalable applications and working in diverse environments.</p>
-
-    </div>
-
-
+        <p>Experienced Backend Engineer with 8+ years in Java, Spring Boot, AWS, and distributed microservices. Passionate about scalable applications and collaborative environments.</p>
+    </section>
 
     <!-- Skills Section -->
-
-    <div class="section" id="skills">
-
+    <section class="skills">
         <h2>Skills</h2>
-
         <ul>
-
-            <li>Programming Languages: Java (8/11/17), Ruby, JavaScript</li>
-
-            <li>Frameworks: Spring Boot, Spring Data</li>
-
-            <li>Databases: PostgreSQL, Redis</li>
-
-            <li>Tools: Docker, Kubernetes, Grafana</li>
-
-            <li>Cloud: AWS (S3, EC2, RDS, Lambda)</li>
-
-            <li>Messaging: Kafka</li>
-
+            <li><i class="fab fa-java"></i> Java (8/11/17)</li>
+            <li><i class="fas fa-leaf"></i> Spring Boot</li>
+            <li><i class="fas fa-database"></i> PostgreSQL, Redis</li>
+            <li><i class="fab fa-docker"></i> Docker, Kubernetes</li>
+            <li><i class="fab fa-aws"></i> AWS (EC2, S3, RDS, Lambda)</li>
+            <li><i class="fas fa-network-wired"></i> Microservices</li>
+            <li><i class="fas fa-tools"></i> CI/CD, Grafana</li>
+            <li><i class="fas fa-stream"></i> Kafka</li>
         </ul>
-
-    </div>
-
-
+    </section>
 
     <!-- Experience Section -->
-
-    <div class="section" id="experience">
-
+    <section class="experience">
         <h2>Experience</h2>
-
-        <ul>
-
-            <li>
-
-                <strong>Backend Engineer at HDFC Bank (PayZapp App)</strong><br>
-
-                <em>FinTech Sector, 2023 - Present</em>
-
-                <p>Owned and scaled Cards and Accounts modules, managing millions of users. Responsible for feature development, optimization, and ensuring smooth transactions for users across India.</p>
-
-            </li>
-
-            <li>
-
-                <strong>Senior Software Engineer at [Previous Company]</strong><br>
-
-                <em>2018 - 2023</em>
-
-                <p>Worked on multiple microservices for various customer value-focused teams, contributing to key engineering functions, CI/CD, and distributed systems development.</p>
-
-            </li>
-
-        </ul>
-
-    </div>
-
-
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Backend Engineer at HDFC Bank (PayZapp)</h3>
+                <span>2023 - Present</span>
+                <p>Owned and scaled Cards and Accounts modules, managing millions of users. Implemented features and optimized app performance for seamless transactions.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>Senior Software Engineer at [Previous Company]</h3>
+                <span>2018 - 2023</span>
+                <p>Worked on microservices architecture for customer value teams, contributed to CI/CD pipelines, and collaborated with cross-functional teams on distributed systems.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Education Section -->
-
-    <div class="section" id="education">
-
+    <section class="education">
         <h2>Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>Bachelor of Technology in Computer Science</h3>
+                <span>[University Name], Year</span>
+            </div>
+        </div>
+    </section>
 
-        <ul>
-
-            <li>
-
-                <strong>Bachelor of Technology in Computer Science</strong><br>
-
-                <em>[University Name], Year</em>
-
-            </li>
-
-        </ul>
-
-    </div>
-
-
-
-    <!-- Projects Section -->
-
-    <div class="section" id="projects">
-
-        <h2>Projects</h2>
-
-        <ul>
-
-            <li>
-
-                <span class="project-title">GitHub Project 1</span> - A project description here with key features and technologies used.
-
-            </li>
-
-            <li>
-
-                <span class="project-title">GitHub Project 2</span> - A project description here with key features and technologies used.
-
-            </li>
-
-        </ul>
-
-    </div>
-
-
-
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Himanshu | Made with <i class="fas fa-heart"></i> by Himanshu</p>
+    </footer>
 </div>
 
-
-
 </body>
-
 </html>
