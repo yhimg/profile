@@ -90,6 +90,14 @@
             color: #007bff;
         }
 
+        .resume-downloads {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
         .download-btn {
             margin-top: 20px;
             padding: 12px 25px;
@@ -198,11 +206,14 @@
             <a href="https://github.com/yhimg"><i class="fab fa-github"></i></a>
             <a href="mailto:goyal.himanshu@live.in"><i class="fas fa-envelope"></i></a>
         </div>
-        <a href="Himanshu_Goyal_Resume.pdf" download="Himanshu_Goyal_Resume.pdf">
-            <button class="download-btn">
-                <i class="fa-solid fa-download"></i> Download Resume
-            </button>
-        </a>
+        <div class="resume-downloads">
+            <a href="Himanshu_Goyal_Resume.pdf" download="Himanshu_Goyal_Resume.pdf" class="download-btn">
+                <i class="fa-solid fa-file-pdf"></i> Download PDF
+            </a>
+            <a href="Himanshu_Goyal_Resume.docx" download="Himanshu_Goyal_Resume.docx" class="download-btn">
+                <i class="fa-solid fa-file-word"></i> Download DOC
+            </a>
+        </div>
     </header>
 
     <!-- Profile -->
